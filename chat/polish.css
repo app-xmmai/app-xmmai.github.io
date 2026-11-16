@@ -1,0 +1,28 @@
+/* polish.css: dark UI + warm orange glow, no blur (light on GPU) */
+:root{--bg:#1b1b1c!important;--c1:#222223!important;--c2:#2b2b2c!important;--bd:rgba(255,255,255,.085)!important;--tx:#e9e7e2!important;--mu:#8f8e89!important}
+html body *,html body *::before,html body *::after{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+html body{background:#1b1b1c!important;color:var(--tx)}
+html body .aurora{display:none!important}
+html body #mainChat{background:radial-gradient(75% 42% at 60% 108%,rgba(196,72,20,.5) 0%,rgba(140,48,14,.24) 42%,rgba(0,0,0,0) 74%) no-repeat,#1b1b1c!important}
+html body #mainChat .view,html body #mainChat .convo,html body #mainChat .dock,html body #mainChat .sp,html body #mainChat .topbar{background:transparent!important}
+/* sidebar */
+html body #sideChat{background:#1e1e1f!important;border-right:1px solid rgba(255,255,255,.07)!important;box-shadow:none!important}
+html body #sideChat .chat-i,html body #sideChat .sidenav2 button,html body #sideChat .side-nav button{border-radius:8px!important;font-size:15px!important;font-weight:400!important;color:#d9d7d2!important;background:transparent!important;padding:9px 10px!important}
+html body #sideChat .chat-i:hover,html body #sideChat .sidenav2 button:hover,html body #sideChat .side-nav button:hover{background:rgba(255,255,255,.055)!important}
+html body #sideChat .side-label{font-size:13px!important;color:#8a8984!important;font-weight:400!important;letter-spacing:0!important;text-transform:none!important}
+html body #sideChat .sbar .sin,html body #sideChat .sbar input{background:transparent!important;border:0!important}
+html body #sideChat .user{background:transparent!important;font-size:15px!important;font-weight:500!important}
+html body #sideChat .av{background:#1f6f66!important;color:#fff!important;border-radius:50%!important}
+/* greeting sits above the composer, left-aligned */
+html body .chatview.empty .sp{display:none!important}
+html body .chatview.empty .convo{display:flex!important;flex-direction:column!important;justify-content:flex-end!important;max-width:752px;width:100%;margin:0 auto!important;padding:0 18px!important}
+html body .chatview.empty .greeting{display:block!important;text-align:left!important;font-size:28px!important;font-weight:500!important;margin:0 0 20px!important;letter-spacing:-.01em;animation:none!important;color:#ecebe6}
+html body .greeting #xg{display:block}
+/* composer: text on top, controls underneath */
+html body .dock{max-width:752px!important;padding:0 18px 28px!important}
+html body .foot{color:#6f6e6a!important;font-size:12px!important;text-align:left!important;padding-top:10px}
+html body .composer{display:grid!important;grid-template-columns:auto 1fr auto auto!important;grid-template-rows:1fr auto!important;grid-template-areas:"msg msg msg msg" "att . mode send"!important;gap:4px 8px!important;align-items:center!important;min-height:104px!important;padding:14px 14px 12px!important;border-radius:14px!important;background:#202021!important;border:1px solid rgba(255,255,255,.14)!important;box-shadow:none!important}
+html body .composer #msg{grid-area:msg!important;min-height:44px;background:transparent!important;border:0!important;font-size:16px!important;color:#ecebe6}
+html body .composer #attBtn{grid-area:att!important;background:transparent!important}
+html body .composer #modeBtn{grid-area:mode!important;background:transparent!important;border:0!important;color:#a8a6a0!important;font-size:14px!important}
+html body .composer #sendBtn{grid-area:send!important;background:#2d2d2e!important;color:#9a9893!important;border-radius:50%!important;width:32px!important;height:32px!important}
